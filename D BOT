@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DerivativesBot>
+    <Configuration>
+        <API>
+            <Key>your_api_key_here</Key>
+            <Secret>your_api_secret_here</Secret>
+            <BaseURL>https://api.yourbroker.com/</BaseURL>
+        </API>
+        <TradingStrategy>
+            <StrategyType>Arbitrage</StrategyType>
+            <RiskManagement>
+                <MaxExposure>10000</MaxExposure>
+                <StopLoss>5</StopLoss>
+                <TakeProfit>10</TakeProfit>
+            </RiskManagement>
+        </TradingStrategy>
+        <Market>
+            <Instruments>
+                <Instrument>
+                    <Symbol>BTC-USD</Symbol>
+                    <Type>Future</Type>
+                </Instrument>
+                <Instrument>
+                    <Symbol>ETH-USD</Symbol>
+                    <Type>Option</Type>
+                </Instrument>
+            </Instruments>
+        </Market>
+        <TradingHours>
+            <Hour>09:00-17:00</Hour>
+            <Hour>18:00-23:59</Hour>
+        </TradingHours>
+    </Configuration>
+    <Logging>
+        <LogLevel>DEBUG</LogLevel>
+        <LogFilePath>/var/log/derivative
